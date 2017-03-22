@@ -1,21 +1,34 @@
+//This may be a good time to work with BiMap collection types from Google
+//Should each plug be its own object or just one plug object with a bimap populated from a constructor
 
 public class Plugs {
-	private char a;
-	private char b;
 	
+	BiMap <char, char> plugPairs = HashBiMap.create();
 	
-	public Plugs(char a char b){
-		a = this.a;
-		b = this.b
-		
+	public Plugs(){
+		new BiMap = plugPairs;
+	}
+			
+	public void addPlugPair(char a char b){
+		plugPairs.put(a, b);		
 	}
 	
-	public char getForwardPlug(char b){
-		
+	public char forwardPlugPair(char a){
+		if(plugPairs.get(a)!=null){
+			return plugPairs.get(a);
+		}
+		else
+			return a;
 	}
 	
-	public char getReversePlug(){
-		
+	public char backwardsPlugPair(char a){
+		if(plugPairs.inverse().get(a)!=null){
+			return plugPairs.inverse().get(a);
+		}
+		else
+			return a;
 	}
+	
+	
 
 }
